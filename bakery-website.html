@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Bakery - Specialty Cakes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d4a574 0%, #a0826d 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #8b7355;
+            padding: 1rem;
+            text-align: center;
+            sticky: top;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #d4a574;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin: 3rem 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #8b7355;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #d4a574;
+            padding-bottom: 0.5rem;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23f4e4c1" width="1200" height="400"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            margin: 0;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            border: none;
+            padding: 0;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #d4a574;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #a0826d;
+        }
+
+        .cake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .cake-card {
+            background: #f9f5f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #e0d0c0;
+        }
+
+        .cake-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cake-card h3 {
+            color: #8b7355;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .cake-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .cake-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #8b7355;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍰 Custom Bakery</h1>
+        <p>Handcrafted Specialty Cakes for Every Occasion</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cakes">Our Cakes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Baked with Love, Made with Passion</h2>
+        <p>Discover our exquisite collection of custom specialty cakes</p>
+        <a href="#cakes" class="cta-button">Explore Our Menu</a>
+    </section>
+
+    <div class="container">
+        <section id="cakes">
+            <h2>Our Specialty Cakes</h2>
+            <p>Each cake is custom-designed and baked fresh to order for your special celebration.</p>
+            <div class="cake-grid">
+                <div class="cake-card">
+                    <div class="cake-icon">🎂</div>
+                    <h3>Classic Vanilla</h3>
+                    <p>Fluffy vanilla sponge with smooth buttercream frosting</p>
+                    <a href="#" class="cta-button">Order Now</a>
+                </div>
+                <div class="cake-card">
+                    <div class="cake-icon">🍫</div>
+                    <h3>Decadent Chocolate</h3>
+                    <p>Rich chocolate cake with silky chocolate ganache</p>
+                    <a href="#" class="cta-button">Order Now</a>
+                </div>
+                <div class="cake-card">
+                    <div class="cake-icon">🍓</div>
+                    <h3>Berry Delight</h3>
+                    <p>Fresh berries with light sponge and whipped cream</p>
+                    <a href="#" class="cta-button">Order Now</a>
+                </div>
+                <div class="cake-card">
+                    <div class="cake-icon">🎨</div>
+                    <h3>Custom Design</h3>
+                    <p>Your dream cake brought to life with custom designs</p>
+                    <a href="#" class="cta-button">Order Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our custom bakery! We specialize in creating beautiful, delicious specialty cakes for weddings, birthdays, anniversaries, and all your special celebrations.</p>
+            <p>Every cake is made with premium ingredients and baked fresh to perfection. We work closely with our customers to bring their cake dreams to life.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>Ready to order your custom cake? Contact us today!</p>
+            <form>
+                <div style="margin-bottom: 1rem;">
+                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Name</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Message</label>
+                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Custom Bakery. All rights reserved.</p>
+        <p>Made with 💛 for cake lovers everywhere</p>
+    </footer>
+</body>
+</html>
